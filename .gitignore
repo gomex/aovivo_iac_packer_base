@@ -1,0 +1,21 @@
+# Cache objects
+packer_cache/
+.packer.d/
+
+# Crash log
+crash.log
+
+# For built boxes
+*.box
+
+# Remote Template Makefile
+packer.inc
+
+creds.json
+key.json
+tmp/
+.env
+*.venv
+ansible/roles/*
+ansible/roles/*
+.ansible

@@ -1,0 +1,46 @@
+---
+
+name: Release
+
+on:
+  release:
+    types:
+      - created
+
+env:
+  AWS_ACCESS_KEY_ID: ${{ secrets.AWS_ACCESS_KEY_ID }}
+  AWS_SECRET_ACCESS_KEY: ${{ secrets.AWS_SECRET_ACCESS_KEY }}
+
+jobs:
+  build:
+    runs-on: ubuntu-20.04
+    name: packer-build
+
+    steps:
+      - name: Checkout Repository
+        uses: actions/checkout@v3
+
+      - name: Install packer and ansible
+        run: |
+          curl -fsSL https://apt.releases.hashicorp.com/gpg | sudo apt-key add - && \
+          sudo apt-add-repository "deb [arch=amd64] https://apt.releases.hashicorp.com $(lsb_release -cs) main" && \
+          sudo apt-get update && sudo apt-get install -y packer ansible
+
+      # init plugins
+      - name: Init Plugins
+        run: packer init packer/
+
+      # build artifact
+      - name: Build Artifact
+        run: packer build -color=false -on-error=abort packer/
+        env:
+          PACKER_LOG: 1
+          PACKER_LOG_PATH: /tmp/packer.log
+          PKR_VAR_release: ${{ github.event.release.tag_name }}
+
+
+      - name: Salva logs do Packer
+        uses: actions/upload-artifact@v2
+        with:
+          name: packer-logs
+          path: /tmp/packer.log
