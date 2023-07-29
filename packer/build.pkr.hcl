@@ -1,5 +1,5 @@
 build {
-  sources = ["source.amazon-ebs.ubuntu-us-east-1"]
+  sources = ["source.amazon-ebs.ubuntu-us-east-2"]
 
   provisioner "ansible" {
     galaxy_file          = "./ansible/requirements.yml"
