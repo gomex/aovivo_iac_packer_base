@@ -5,7 +5,7 @@ locals {
 source "amazon-ebs" "ubuntu-us-east-1" {
   ssh_username  = var.user
   instance_type = "t3.micro"
-  region        = "us-east-1"
+  region        = "us-east-2"
   ami_name      = replace("base-${local.image_id}", ".", "-")
   tags = {
     OS_Version    = "Ubuntu"
@@ -17,7 +17,7 @@ source "amazon-ebs" "ubuntu-us-east-1" {
   source_ami_filter {
     filters = {
       virtualization-type = "hvm"
-      name                = "ubuntu/images/*ubuntu-focal-20.04-amd64-server-*"
+      name                = "ubuntu/images/*ubuntu-focal-22.04-amd64-server-*"
       root-device-type    = "ebs"
     }
     owners      = ["099720109477"]
