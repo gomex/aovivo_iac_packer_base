@@ -14,7 +14,6 @@ build {
 
     user = var.user
 
-    
     extra_arguments = ["-vvvv"]
   }
 }
