@@ -8,10 +8,7 @@ build {
     galaxy_force_install = true
 
     playbook_file    = "./ansible/playbook.yml"
-    ssh_options {
-      host_key_algorithms = "+ssh-rsa"
-      pubkey_accepted_algorithms = "+ssh-rsa"
-    }
+    
     ansible_env_vars = ["ANSIBLE_REMOTE_TMP=/tmp/.ansible/tmp"]
     roles_path       = "./ansible/roles"
 
