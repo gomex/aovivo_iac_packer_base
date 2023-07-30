@@ -10,10 +10,11 @@ build {
     roles_path       = "./ansible/roles"
 
     user = var.user
+    use_proxy = false
 
     ansible_ssh_extra_args = [
       "-o HostKeyAlgorithms=+ssh-rsa -o PubkeyAcceptedKeyTypes=+ssh-rsa -o StrictHostKeyChecking=no"
     ]
-    //extra_arguments = ["-vvvv"]
+    extra_arguments = [""]
   }
 }
