@@ -9,7 +9,7 @@ build {
     ansible_env_vars = ["ANSIBLE_REMOTE_TMP=/tmp/.ansible/tmp", ]
     roles_path       = "./ansible/roles"
 
-    user = var.user
+    user = "ubuntu"
 
     // extra_arguments = ["-vvvv"]
   }
