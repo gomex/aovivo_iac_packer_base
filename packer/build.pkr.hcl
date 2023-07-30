@@ -11,6 +11,6 @@ build {
 
     user = var.user
 
-    extra_arguments = ["${concat(local.default_ansible_extra_args, var.ansible_extra_args)}", ]
+    
   }
 }
