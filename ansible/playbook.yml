@@ -17,7 +17,7 @@
     ssh_allow_tcp_forwarding: "false"
     ssh_permit_tunnel: "false"
     
-#    ssh_listen_to: "['{{ ansible_default_ipv4.address }}']"
+    ssh_listen_to: "['{{ ansible_default_ipv4.address }}']"
   roles:
     - geerlingguy.pip
     - geerlingguy.docker
