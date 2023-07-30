@@ -2,7 +2,7 @@ locals {
   image_id = var.release != "" ? var.release : formatdate("YYYYMMDDhhmmss", timestamp())
 }
 
-source "amazon-ebs" "ubuntu-us-east-1" {
+source "amazon-ebs" "ubuntu-us-east-2" {
   ssh_username  = var.user
   instance_type = "t3.micro"
   region        = "us-east-2"
