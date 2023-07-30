@@ -14,6 +14,6 @@ build {
     ansible_ssh_extra_args = [
       "-o HostKeyAlgorithms=+ssh-rsa -o PubkeyAcceptedKeyTypes=+ssh-rsa"
     ]
-    extra_arguments = ["-vvvv"]
+    //extra_arguments = ["-vvvv"]
   }
 }
