@@ -20,5 +20,5 @@
   roles:
     - geerlingguy.pip
     - geerlingguy.docker
-    - dev-sec.ssh-hardening
+  #  - dev-sec.ssh-hardening
 
