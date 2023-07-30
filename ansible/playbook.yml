@@ -16,6 +16,7 @@
     ssh_allow_agent_forwarding: "false"
     ssh_allow_tcp_forwarding: "false"
     ssh_permit_tunnel: "false"
+    use_proxy: "false"
     #ssh_listen_to: "['{{ ansible_default_ipv4.address }}']"
   roles:
     - geerlingguy.pip
