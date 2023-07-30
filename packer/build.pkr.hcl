@@ -16,6 +16,6 @@ build {
       "-o HostKeyAlgorithms=+ssh-rsa -o PubkeyAcceptedKeyTypes=+ssh-rsa -o StrictHostKeyChecking=no"
     ]
 
-    //extra_arguments = [""]
+    extra_arguments = [""]
   }
 }
