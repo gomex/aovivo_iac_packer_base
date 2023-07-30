@@ -1,5 +1,9 @@
 build {
   sources = ["source.amazon-ebs.ubuntu-us-east-2"]
+  ssh_options {
+  host_key_algorithms = "+ssh-rsa"
+  pubkey_accepted_algorithms = "+ssh-rsa"
+}
 
   provisioner "ansible" {
     galaxy_file          = "./ansible/requirements.yml"
