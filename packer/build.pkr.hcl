@@ -12,7 +12,7 @@ build {
       host_key_algorithms = "+ssh-rsa"
       pubkey_accepted_algorithms = "+ssh-rsa"
     }
-    ansible_env_vars = ["ANSIBLE_REMOTE_TMP=/tmp/.ansible/tmp","ANSIBLE_PROXY_ENABLED=false" ]
+    ansible_env_vars = ["ANSIBLE_REMOTE_TMP=/tmp/.ansible/tmp"]
     roles_path       = "./ansible/roles"
 
     user = "ubuntu"
