@@ -23,5 +23,6 @@ source "amazon-ebs" "ubuntu-us-east-2" {
     owners      = ["099720109477"]
     most_recent = true
   }
+  ssh_agent_auth = false
 }
 
