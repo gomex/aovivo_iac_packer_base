@@ -1,5 +1,6 @@
 build {
   sources = ["source.amazon-ebs.ubuntu-us-east-2"]
+  temporary_key_pair_type: "ed25519"
 
   provisioner "ansible" {
     galaxy_file          = "./ansible/requirements.yml"
