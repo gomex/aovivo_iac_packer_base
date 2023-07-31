@@ -12,9 +12,9 @@ build {
       "-o HostKeyAlgorithms=+ssh-rsa -o PubkeyAcceptedKeyTypes=+ssh-rsa"
     ]
     extra_arguments = [
-      "--scp-extra-args", "'-O'"
+      "--scp-extra-args", "-O"
     ]
-    
+
     // removido extra_arguments vazio
   }
 }
