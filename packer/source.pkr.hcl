@@ -4,6 +4,7 @@ locals {
 
 source "amazon-ebs" "ubuntu-us-east-2" {
   ssh_username  = var.user
+  temporary_key_pair_type = "ed25519"
   instance_type = "t3.micro"
   region        = "us-east-2"
   ami_name      = replace("base-${local.image_id}", ".", "-")
