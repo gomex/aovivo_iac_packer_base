@@ -3,7 +3,7 @@ locals {
 }
 
 source "amazon-ebs" "ubuntu-us-east-2" {
-  ssh_username  = var.user
+  
   instance_type = "t3.micro"
   region        = "us-east-2"
   ami_name      = replace("base-${local.image_id}", ".", "-")
@@ -24,5 +24,6 @@ source "amazon-ebs" "ubuntu-us-east-2" {
     most_recent = true
   }
   ssh_agent_auth = false
+  ssh_username  = "ubuntu"
 }
 
