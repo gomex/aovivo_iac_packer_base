@@ -8,10 +8,10 @@ build {
     ansible_env_vars     = ["ANSIBLE_REMOTE_TMP=/tmp/.ansible/tmp", "no_proxy=\"*\"", "ANSIBLE_HOST_KEY_CHECKING=False", "ANSIBLE_SSH_ARGS='-o ForwardAgent=yes -o ControlMaster=auto -o ControlPersist=60s'"]
     roles_path           = "./ansible/roles"
     user                 = var.user
-    extra_arguments = [
-      "--scp-extra-args", "'-O'", "--ssh-extra-args", "-o IdentitiesOnly=yes -o HostKeyAlgorithms=+ssh-rsa -o PubkeyAcceptedAlgorithms=+ssh-rsa"
-      ]
- 
+    ansible_ssh_extra_args = [
+      "-o StrictHostKeyChecking=no -o UserKnownHostsFile=/dev/null"
+    ]
+
     // removido extra_arguments vazio
   }
 }
