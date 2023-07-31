@@ -4,7 +4,7 @@ name: Packer
 on:
   push:
     branches:
-      - dev
+      - Dev
 
 env:
   AWS_ACCESS_KEY_ID: ${{ secrets.AWS_ACCESS_KEY_ID }}
