@@ -9,9 +9,9 @@ build {
     roles_path           = "./ansible/roles"
     user                 = var.user
     extra_arguments = [
-      "--scp-extra-args", "'-O'", "--ssh-extra-args", "-o IdentitiesOnly=yes -o HostKeyAlgorithms=+ssh-rsa -o PubkeyAcceptedAlgorithms=+ssh-rsa"
+      "--scp-extra-args", "'-O'", "--ssh-extra-args", "-o StrictHostKeyChecking=no -o UserKnownHostsFile=/dev/null -o IdentitiesOnly=yes -o HostKeyAlgorithms=+ssh-rsa -o PubkeyAcceptedAlgorithms=+ssh-rsa"
     ]
-
+ 
     // removido extra_arguments vazio
   }
 }
