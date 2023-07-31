@@ -11,6 +11,10 @@ build {
     ansible_ssh_extra_args = [
       "-o HostKeyAlgorithms=+ssh-rsa -o PubkeyAcceptedKeyTypes=+ssh-rsa"
     ]
+    extra_arguments = [
+      "--scp-extra-args", "'-O'"
+    ]
+    
     // removido extra_arguments vazio
   }
 }
