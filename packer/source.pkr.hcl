@@ -24,6 +24,6 @@ source "amazon-ebs" "ubuntu-us-east-2" {
     most_recent = true
   }
   ssh_agent_auth = false
-  ssh_username  = "ubuntu"
+  ssh_username  = var.user
 }
 
