@@ -8,10 +8,7 @@ build {
     ansible_env_vars     = ["ANSIBLE_REMOTE_TMP=/tmp/.ansible/tmp"]
     roles_path           = "./ansible/roles"
     user                 = var.user
-    ansible_ssh_extra_args = [
-      "-o HostKeyAlgorithms=+ssh-rsa -o PubkeyAcceptedKeyTypes=+ssh-rsa -o IdentitiesOnly=yes",
-    ]
-    
+       
     // removido extra_arguments vazio
   }
 }
