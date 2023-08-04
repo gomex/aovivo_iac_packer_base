@@ -9,9 +9,9 @@ build {
     roles_path           = "./ansible/roles"
     user                 = var.user
     
-    //ansible_ssh_extra_args = [
-    //  "'-o StrictHostKeyChecking=no -o UserKnownHostsFile=/dev/null'"
-    //]
+    ansible_ssh_extra_args = [
+      "'-o StrictHostKeyChecking=no -o UserKnownHostsFile=/dev/null'"
+    ]
 
     // removido extra_arguments vazio
   }
