@@ -8,9 +8,9 @@ build {
     ansible_env_vars     = ["ANSIBLE_REMOTE_TMP=/tmp/.ansible/tmp", "ANSIBLE_HOST_KEY_CHECKING=False"]
     roles_path           = "./ansible/roles"
     user                 = var.user
-    ansible_ssh_extra_args = [
-      "'-o StrictHostKeyChecking=no -o UserKnownHostsFile=/dev/null'"
-    ]
+    //ansible_ssh_extra_args = [
+    //  "'-o StrictHostKeyChecking=no -o UserKnownHostsFile=/dev/null'"
+    //]
 
     // removido extra_arguments vazio
   }
