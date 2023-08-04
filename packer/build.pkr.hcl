@@ -8,7 +8,7 @@ build {
     ansible_env_vars     = ["ANSIBLE_REMOTE_TMP=/tmp/.ansible/tmp", "no_proxy=\"*\"", "ANSIBLE_HOST_KEY_CHECKING=False", "ANSIBLE_SSH_ARGS='-o HostkeyAlgorithms=+ssh-rsa -o PubkeyAcceptedKeyTypes=+ssh-rsa -o ControlMaster=auto -o ControlPersist=60s'"]
     roles_path           = "./ansible/roles"
     user                 = var.user
-    extra_arguments     = "${concat(local.default_ansible_extra_args, var.ansible_extra_args)}"
+    //extra_arguments     = "${concat(local.default_ansible_extra_args, var.ansible_extra_args)}"
 
     
   }
