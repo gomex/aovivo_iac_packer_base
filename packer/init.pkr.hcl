@@ -4,6 +4,5 @@ packer {
       version = ">= 1.2.6"
       source  = "github.com/hashicorp/amazon"
     }
-       
   }
 }
