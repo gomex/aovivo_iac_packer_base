@@ -1,6 +1,6 @@
 build {
   hcp_packer_registry {
-    bucket_name = "base-image"
+    bucket_name = "base-image-aovivo"
     description = "Testando o packer HCP"
 
     bucket_labels = {
