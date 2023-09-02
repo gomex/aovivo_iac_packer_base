@@ -1,4 +1,19 @@
 build {
+  hcp_packer_registry {
+    bucket_name = "base-image"
+    description = "Testando o packer HCP"
+
+    bucket_labels = {
+      "owner"          = "Plataforma"
+      "os"             = "Ubuntu",
+      "ubuntu-version" = "Focal 20.04",
+    }
+
+    build_labels = {
+      "build-time"   = timestamp()
+      "build-source" = basename(path.cwd)
+    }
+  }
   sources = ["source.amazon-ebs.ubuntu-us-east-1"]
 
   provisioner "ansible" {
